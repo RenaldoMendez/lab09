@@ -77,16 +77,16 @@ public class UserServlet extends HttpServlet {
         
         switch (roleID) {
             case 1:
-                role = new Role(1, "System Admin");
+                role = new Role((Integer)1, "System Admin");
             break;
             case 2:
-                role = new Role(2, "Regular User");
+                role = new Role((Integer)2, "Regular User");
             break;
             case 3:
-                role = new Role(3, "Company Admin");
+                role = new Role((Integer)3, "Company Admin");
             break;
             default:
-                role = new Role(2, "Regular User");
+                role = new Role((Integer)2, "Regular User");
         }
         
         // Create User Service

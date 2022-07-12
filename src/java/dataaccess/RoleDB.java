@@ -27,7 +27,7 @@ public class RoleDB {
     public List<Role> getAll() throws Exception {
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         try {
-            List<Role> rolesList = em.createNamedQuery("User.findAll", Role.class).getResultList();
+            List<Role> rolesList = em.createNamedQuery("Role.findAll", Role.class).getResultList();
             return rolesList;
         } finally {
             em.close();

@@ -100,6 +100,7 @@ public class UserDB {
             //merging first ensures that the user that is passed to be removed, exists in the database
             em.remove(em.merge(user));
             em.merge(role);
+            
             trans.commit();
         
         }catch(Exception e){
