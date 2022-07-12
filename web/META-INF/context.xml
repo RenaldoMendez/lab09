@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context path="/SAIT_CPRG352_Lab09_JPA">
-  <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" logAbandoned="true" maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/userdb" password="password" removeAbandoned="true" removeAbandonedTimeout="60" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/userdb" username="root"/>
+  <Resource
+            name="jdbc/userdb" 
+            url="jdbc:mysql://localhost:3306/userdb" 
+            username="root" password="password"
+            auth="Container" 
+            driverClassName="com.mysql.jdbc.Driver"
+            maxActive="100" maxIdle="30" maxWait="10000"
+            logAbandoned="true"  removeAbandoned="true" 
+            removeAbandonedTimeout="60" type="javax.sql.DataSource" />
 </Context>

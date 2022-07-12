@@ -26,14 +26,19 @@ public class UserService {
     }
     
     public void insert(String email, boolean activity, String first_name, String last_name, String password, Role role) throws Exception{
-        User user = new User(email, activity, first_name, last_name, password, role);
+        User user = new User(email, activity, first_name, last_name, password);
+        //bi-directional relationship
+        user.setRole(role);
         UserDB userDB = new UserDB();
         userDB.insert(user);
     }
     
     public void update(String email, boolean activity, String first_name, String last_name, String password, Role role) throws Exception{
         UserDB userDB = new UserDB();
+        //retrieve the user that the user wants to update
         User user = userDB.get(email);
+        //set the attributes of the user to the new values
+        user.setActive(activity);
         user.setFirstName(first_name);
         user.setLastName(last_name);
         user.setRole(role);
